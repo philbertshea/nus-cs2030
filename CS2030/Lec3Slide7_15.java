@@ -4,8 +4,9 @@ package CS2030;
 
 import java.lang.Math;
 import java.util.Scanner;
+import java.awt.Color;
 
-public class Lec3Slide1_6 {
+public class Lec3Slide7_15 {
 
     public static void main(String[] args) {
         test();
@@ -20,7 +21,13 @@ public class Lec3Slide1_6 {
     static void test() {
         System.out.println("Tester");
         Boolean midpointTester = new Point(0, 0).midpoint(new Point(1, 1)).equals(new Point(0.5, 0.5));
-        System.out.println(midpointTester);
+        System.out.println("MidPoint is : " + midpointTester);
+        Boolean equalsTester = new Point(0.5, 0.5).equals(new Point(1, 1));
+        System.out.println("Equals is: " + equalsTester);
+        Boolean circleTester = new Circle(new Point(1, 1), 1.0).contains(new Point(1, 2));
+        FilledCircle fc = new FilledCircle(new Point(2, 2), 3/Math.PI, new Color(0,0,255));
+        System.out.println(fc.getCircumference());
+        System.out.println("circleTester is: " + circleTester);
     }
 
     static Circle getDisc(Scanner scanner) {
@@ -133,7 +140,7 @@ public class Lec3Slide1_6 {
                 Point p = (Point) obj; // Type casting
                 // creates a Point p from obj, asserting obj is of type Point
                 // this is so that the x and y properties can be accessed.
-                return (Math.abs(this.x - p.x) < 1E-15) && (Math.abs(this.y - p.y) < 1E-15);
+                return Math.abs(this.x - p.x) < 1E-15 && Math.abs(this.y - p.y) < 1E-15; // ABSOLUTE!!
             } else {
                 return false;
             }
@@ -158,30 +165,62 @@ public class Lec3Slide1_6 {
         }
     }
 
-    public static class Circle {
-        private Point centre;
-        private double radius;
+    static class Circle {
+        private final Point centre;
+        private final double radius;
 
-        // Constructor for unit circle: when no radius parameter is provided,
-        // automatically assumed to be a unit circle of radius 1.0 units.
-        // Without this, an error will appear if the Main driver has Circle(<1
-        // parameter>) used to create a Circle object. (2 expected.)
         public Circle(Point centre) {
             this.centre = centre;
             this.radius = 1.0;
         }
 
-        // Constructor for circle with radius provided.
         public Circle(Point centre, double radius) {
             this.centre = centre;
             this.radius = radius;
         }
 
-        // Check if the point is within the circle.
+        public double getArea() {
+            return Math.PI * radius * radius;
+        }
+
+        public double getCircumference() {
+            return Math.PI * 2 * radius;
+        }
+
+
         public boolean contains(Point point) {
-            // Use distance function which is specific to Point objects
             return (point.distance(centre) <= radius);
         }
+
+        @Override
+        public String toString() {
+            return "Circle of centre ( " + centre.getX() + " , " + centre.getY() + " ) and radius " + radius + " ";
+        }
     }
+
+    // Inheritance: FilledCircle inherits the properties of Circle
+    // FilledCircle is a subclass/subset of Circle (or it can be said: FilledCircle is a Circle)
+    // with additional property of color
+    public static class FilledCircle extends Circle {
+        private final Color color;
+
+        // Constructor which uses the superclass definition for centre and radius, and assigns color property
+        public FilledCircle(Point centre, double radius, Color color) {
+            super(centre, radius);
+            this.color = color;
+        }
+
+        public Color getColor() {
+            return color;
+        }
+
+        // Super(..) to access parent constructor
+        // super.radius or super.getArea() to access parent properties and methods respectively
+        @Override
+        public String toString() {
+            return super.toString() + "and colour " + color + " ";
+        }
+    }
+
 
 }
