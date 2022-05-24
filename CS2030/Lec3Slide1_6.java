@@ -8,12 +8,19 @@ import java.util.Scanner;
 public class Lec3Slide1_6 {
 
     public static void main(String[] args) {
+        test();
         Scanner scanner = new Scanner(System.in);
         Circle disc = getDisc(scanner);
         int numPoints = getNumofPoints(scanner);
         Point[] points = readPoints(scanner, numPoints);
         Boolean[] insideDisc = insideCounter(disc, points);
         printPoints(points, insideDisc);
+    }
+
+    static void test() {
+        System.out.println("Tester");
+        Boolean midpointTester = new Point(0, 0).midpoint(new Point(1, 1)).equals(new Point(0.5, 0.5));
+        System.out.println(midpointTester);
     }
 
     static Circle getDisc(Scanner scanner) {
@@ -123,25 +130,28 @@ public class Lec3Slide1_6 {
             if (this == obj) {
                 return true;
             } else if (obj instanceof Point) {
-                Point p = (Point) obj; 
+                Point p = (Point) obj; // Type casting
                 // creates a Point p from obj, asserting obj is of type Point
                 // this is so that the x and y properties can be accessed.
-                return (this.x - p.x <1E-15) && (this.y - p.y < 1E-15);
+                return (this.x - p.x < 1E-15) && (this.y - p.y < 1E-15);
             } else {
                 return false;
             }
         }
 
-        // Distance function for Point object takes in another point object as parameter
-        // and returns the distance between that otherpoint and itself.
+        // midpoint
+        public Point midpoint(Point otherpoint) {
+            double midX = (this.x + otherpoint.x) / 2;
+            double midY = (this.y + otherpoint.y) / 2;
+            return new Point(midX, midY);
+        }
+
         public double distance(Point otherpoint) {
             double Xdistsquared = (otherpoint.x - this.x) * (otherpoint.x - this.x);
             double Ydistsquared = (otherpoint.y - this.y) * (otherpoint.y - this.y);
             return Math.sqrt(Xdistsquared + Ydistsquared);
         }
 
-        // toString is a function which describes the object as a string value. As it is
-        // predefined, it is overrided and therefore, marked with @Override.
         @Override
         public String toString() {
             return "Point (" + this.x + " , " + this.y + ")";
