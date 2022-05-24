@@ -16,7 +16,7 @@ public class Access2 {
         public void claimInsurance() {
             year = 2020;
             mileage = 1000;
-            toBeScrapped = false;
+            // toBeScrapped = false;
             COE = 1000;
         }
         
@@ -42,12 +42,12 @@ public class Access2 {
         // Case 3: Other class in SAME PACKAGE. Default, public, protected OK. Private NO.
         obj1.name = "Apple";
         obj1.PlaceOfOrigin = "Korea";
-        obj1.productionCost = 10;
+        // obj1.productionCost = 10;
         obj1.price = 100;
 
         car1.year = 1000;
         car1.mileage = 1000;
-        car1.toBeScrapped = true;
+        // car1.toBeScrapped = true;
         car1.COE = 50000;
     }
     

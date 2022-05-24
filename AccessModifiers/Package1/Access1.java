@@ -48,7 +48,7 @@ public class Access1 {
         public void claimInsurance() {
             year = 2020;
             mileage = 1000;
-            toBeScrapped = false;
+            // toBeScrapped = false;
             COE = 1000;
         }
         
