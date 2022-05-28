@@ -1,4 +1,6 @@
-// Changed the equals method with Point to adhere to OOP principles
+// Update Circle methods and add FilledCircle inherited class.
+// Polymorphism simply means that one function can have many forms in different subclasses.
+// E.g. Bird: sing() --> print "tweet"    Robin extends Bird: sing() --> print "dododo". Priority for Robin is the function within its own subclass i.e. "dododo"
 
 package CS2030;
 
@@ -25,7 +27,7 @@ public class Lec3Slide7_15 {
         Boolean equalsTester = new Point(0.5, 0.5).equals(new Point(1, 1));
         System.out.println("Equals is: " + equalsTester);
         Boolean circleTester = new Circle(new Point(1, 1), 1.0).contains(new Point(1, 2));
-        FilledCircle fc = new FilledCircle(new Point(2, 2), 3/Math.PI, new Color(0,0,255));
+        FilledCircle fc = new FilledCircle(new Point(2, 2), 3 / Math.PI, new Color(0, 0, 255));
         System.out.println(fc.getCircumference());
         System.out.println("circleTester is: " + circleTester);
     }
@@ -187,7 +189,6 @@ public class Lec3Slide7_15 {
             return Math.PI * 2 * radius;
         }
 
-
         public boolean contains(Point point) {
             return (point.distance(centre) <= radius);
         }
@@ -199,12 +200,14 @@ public class Lec3Slide7_15 {
     }
 
     // Inheritance: FilledCircle inherits the properties of Circle
-    // FilledCircle is a subclass/subset of Circle (or it can be said: FilledCircle is a Circle)
+    // FilledCircle is a subclass/subset of Circle (or it can be said: FilledCircle
+    // is a Circle)
     // with additional property of color
     public static class FilledCircle extends Circle {
         private final Color color;
 
-        // Constructor which uses the superclass definition for centre and radius, and assigns color property
+        // Constructor which uses the superclass definition for centre and radius, and
+        // assigns color property
         public FilledCircle(Point centre, double radius, Color color) {
             super(centre, radius);
             this.color = color;
@@ -215,12 +218,12 @@ public class Lec3Slide7_15 {
         }
 
         // Super(..) to access parent constructor
-        // super.radius or super.getArea() to access parent properties and methods respectively
+        // super.radius or super.getArea() to access parent properties and methods
+        // respectively
         @Override
         public String toString() {
             return super.toString() + "and colour " + color + " ";
         }
     }
-
 
 }
