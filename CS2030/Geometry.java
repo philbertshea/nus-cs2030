@@ -7,8 +7,8 @@ public class Geometry {
     public static class Point {
         // Point properties: x and y coordinates. private --> only accessible within
         // point class.
-        private double x;
-        private double y;
+        protected double x;
+        protected double y;
 
         // Point constructor (same name as class) takes in x and y coordinate values and
         // assigns these to the x/y coordinate properties.
@@ -57,11 +57,17 @@ public class Geometry {
             double Ydistsquared = (otherpoint.y - this.y) * (otherpoint.y - this.y);
             return Math.sqrt(Xdistsquared + Ydistsquared);
         }
+        
+        public Point moveTo(double theta, double d) {
+            // Not sure how to moveTo
+            return new Point(this.x, this.y);
+        }
 
         @Override
         public String toString() {
             return "Point (" + this.x + " , " + this.y + ")";
         }
+
     }
 
     static class Circle {

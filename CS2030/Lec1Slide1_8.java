@@ -16,5 +16,6 @@ public class Lec1Slide1_8 {
         y = scanner.nextDouble();
         
         System.out.println("(" + x + "," + y + ")");
+        scanner.close();
     }
 }

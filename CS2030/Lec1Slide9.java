@@ -34,6 +34,7 @@ public class Lec1Slide9 {
 
         }
 
+        scanner.close();
         System.out.println("All the " + NumOfPoints + " points are as follows:");
         for (int k = 0; k < NumOfPoints; k++) {
             System.out.println("Point #" + (k + 1) + "(" + a[k * 2] + "," + a[k * 2 + 1] + ")");

@@ -5,22 +5,21 @@ import java.util.Scanner;
 
 public class Lec1Slide11_12 {
     public static void main(String[] args) {
-        int NumOfPoints = getNumber();
-        double points[][] = readPoints(NumOfPoints);
+        Scanner scanner = new Scanner(System.in);
+        int NumOfPoints = getNumber(scanner);
+        double points[][] = readPoints(NumOfPoints, scanner);
         printPoints(points, NumOfPoints);
         System.out.println("Ended.");
     }
     
-    static int getNumber() {
-        Scanner scanner = new Scanner(System.in);
+    static int getNumber(Scanner scanner) {
         System.out.println("Please enter the number of points needed: ");
         int NumOfPoints = scanner.nextInt();
         return NumOfPoints;
     }
 
-    static double[][] readPoints(int NumOfPoints) {
+    static double[][] readPoints(int NumOfPoints, Scanner scanner) {
         boolean invalid = false;
-        Scanner scanner = new Scanner(System.in);
 
         // Use a double array for easier management of points.
         double a[][] = new double[NumOfPoints][2];
