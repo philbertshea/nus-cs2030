@@ -1,4 +1,4 @@
-package CS2030;
+package CS2030.Lec5Generics;
 
 import java.awt.Color;
 
