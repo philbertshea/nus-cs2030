@@ -1,3 +1,7 @@
+// One way to handle exceptions.
+// NOTE: This breaks the abstraction barrier and hence is not desirable. 
+// It is preferred to use a try-catch-finally block to handle exceptions, 
+// on top of declaring the exception thrown (public void m1() throws FileNotFoundException)
 package CS2030;
 
 import java.io.FileNotFoundException;

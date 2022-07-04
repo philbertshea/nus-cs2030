@@ -32,5 +32,6 @@ public class Lec6Slide10 {
         } finally {
             System.err.println("Program terminates\n");
         }
+        // Try-catch-finally block
     }
 }
