@@ -5,12 +5,11 @@
 package CS2030;
 
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 import CS2030.Geometry.*;
 
-public class Lec6Slide19 {
+public class Lec6Slide19_20 {
     
     static Point createPoint(Scanner scanner) {
         try {

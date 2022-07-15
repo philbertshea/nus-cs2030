@@ -5,7 +5,7 @@ import java.io.FileReader;
 import java.util.Scanner;
 import CS2030.Geometry.Point;
 
-public class Lec6Slide10 {
+public class Lec6Slide10_14 {
     public static void main(String[] args) {
         try {
             FileReader file = new FileReader(args[0]);

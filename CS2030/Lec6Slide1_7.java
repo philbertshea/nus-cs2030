@@ -152,7 +152,7 @@ class Rectangle {
     }
 }
 
-public class Lec6Slide1 {
+public class Lec6Slide1_7 {
     public static void main(String[] args) {
         new RectangleCreator(); // Error if RectangleCreator is not a static nested class
         // new Rectangle(1,2).new RectangleCreator(); // Error if RectangleCreator is a

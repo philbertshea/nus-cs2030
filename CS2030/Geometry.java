@@ -1,9 +1,10 @@
 package CS2030;
 
 import java.awt.Color;
+import java.util.Optional;
 
 public class Geometry {
-    
+
     public static class Point {
         // Point properties: x and y coordinates. private --> only accessible within
         // point class.
@@ -57,7 +58,7 @@ public class Geometry {
             double Ydistsquared = (otherpoint.y - this.y) * (otherpoint.y - this.y);
             return Math.sqrt(Xdistsquared + Ydistsquared);
         }
-        
+
         public Point moveTo(double theta, double d) {
             // Not sure how to moveTo
             return new Point(this.x, this.y);
@@ -92,9 +93,34 @@ public class Geometry {
             return Math.PI * 2 * radius;
         }
 
-
         public boolean contains(Point point) {
             return (point.distance(centre) <= radius);
+        }
+
+        static Circle getCircle(Point centre, double radius) {
+            // getCircle serves as an additional filter to check whether the radius is valid
+            // to filter through non-positive radius values, it is best to use a static
+            // function
+            // like getCircle, IMPLEMENTED WITHIN CIRCLE CLASS, instead of directly using
+            // the constructor Circle(...).
+            return (radius > 0 ? new Circle(centre, radius) : null);
+        }
+
+        static Lec7Maybe<Circle> getMaybeCircle(Point centre, double radius) {
+            if (radius > 0) {
+                return new Lec7Maybe<Circle>(new Circle(centre, radius));
+            } else {
+                return Lec7Maybe.empty();
+            }
+        }
+
+        static Optional<Circle> getOptionalCircle(Point centre, double radius) {
+            if (radius > 0) {
+                return Optional.of(new Circle(centre, radius)); // Optional.of is a static method that creates a new
+                                                                // Optional instance
+            } else {
+                return Optional.empty(); // Optional.empty is a static method that creates an empty Optional instance
+            }
         }
 
         @Override
@@ -103,13 +129,52 @@ public class Geometry {
         }
     }
 
+    public static class OptCircle {
+        private final Optional<Point> centre;
+        private final double radius;
+
+        // RECALL: Private because
+        private OptCircle(Optional<Point> centre, double radius) {
+            this.centre = centre;
+            this.radius = radius;
+        }
+
+        public boolean contains(Point other) {
+            return centre.get().distance(other) <= radius; // Optional.get() returns the "thing" that the Optional takes
+                                                           // in
+        }
+
+        static Optional<OptCircle> getOptCircle(Point centre, double radius) {
+            // Here we just use Point not Optional<Point>. The user of the function is not
+            // expected to create his
+            // own Optional. All Optional-related processes at the backend.
+            if (radius > 0) {
+                return Optional.of(new OptCircle(Optional.of(centre), radius));
+            } else {
+                return Optional.empty();
+            }
+        }
+
+        public Optional<Point> getCentre() {
+            return centre;
+        }
+
+        @Override
+        public String toString() {
+            return "OptCircle of Centre " + centre + " and radius " + radius;
+        }
+
+    }
+
     // Inheritance: FilledCircle inherits the properties of Circle
-    // FilledCircle is a subclass/subset of Circle (or it can be said: FilledCircle is a Circle)
+    // FilledCircle is a subclass/subset of Circle (or it can be said: FilledCircle
+    // is a Circle)
     // with additional property of color
     public static class FilledCircle extends Circle {
         private final Color color;
 
-        // Constructor which uses the superclass definition for centre and radius, and assigns color property
+        // Constructor which uses the superclass definition for centre and radius, and
+        // assigns color property
         public FilledCircle(Point centre, double radius, Color color) {
             super(centre, radius);
             this.color = color;
@@ -120,7 +185,8 @@ public class Geometry {
         }
 
         // Super(..) to access parent constructor
-        // super.radius or super.getArea() to access parent properties and methods respectively
+        // super.radius or super.getArea() to access parent properties and methods
+        // respectively
         @Override
         public String toString() {
             return super.toString() + "and colour " + color + " ";

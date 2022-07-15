@@ -3,7 +3,7 @@ package CS2030;
 
 import CS2030.Geometry.*;
 
-public class Lec6Slide15 {
+public class Lec6Slide15_16 {
     static Circle createCircle(Point p, Point q, double radius) {
         // This is doable by arithmetic by substituting into the equation (x-h)^2 +
         // (y-k)^2 = r^2. But a bit complicated.

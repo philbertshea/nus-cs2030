@@ -3,7 +3,7 @@ package CS2030;
 
 import CS2030.Geometry.*;
 
-public class Lec6Slide17 {
+public class Lec6Slide17_18 {
     static class IllegalCircleException extends IllegalArgumentException {
         Point p, q;
 

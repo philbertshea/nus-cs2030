@@ -1,6 +1,6 @@
 package CS2030;
 
-public class Lec6Slide22 {
+public class Lec6Slide22_24 {
 
     // Besides defining constants, enums can also store variables, methods and have
     // constructors, just like any other class.

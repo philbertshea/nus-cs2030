@@ -9,7 +9,7 @@ import java.io.FileReader;
 import java.util.Scanner;
 import CS2030.Geometry.Point;
 
-public class Lec6Slide8 {
+public class Lec6Slide8_9 {
     public static void main(String[] args) throws FileNotFoundException {
         FileReader file = new FileReader(args[0]);
         // If no exception is thrown, a compilation error is produced.
