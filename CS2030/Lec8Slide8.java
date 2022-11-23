@@ -27,7 +27,7 @@ interface Monad<T> {
  * }
  */
 
-public class Lec8Slide8 {
+public class Lec8Slide8 { // In this case, monad is Optional
     public static void main(String[] args) {
         // Monads follow three laws.
         // Law 1: Left identity law. Monad.of(x).flatMap(f) = f.apply(x)
@@ -37,7 +37,7 @@ public class Lec8Slide8 {
 
         Function<Integer, Optional<Integer>> f = x -> Optional.of(x + 1); // 1 -> Optional[2]
         opt.flatMap(f); // mapper.apply(value), mapper = f, value = x
-        System.out.println("By Left identity law, Optional.of(x).flatMap(f) " + opt.flatMap(f)
+        System.out.println("\nBy Left identity law, Optional.of(x).flatMap(f) " + opt.flatMap(f)
                 + " is equal to f.apply(x) " + f.apply(1));
 
         // Law 2: Right identity law. monad.flatmap(x -> Monad.of(x)) = monad
@@ -45,14 +45,15 @@ public class Lec8Slide8 {
         opt.flatMap(g); // mapper.apply(value), mapper = g, value = x --> g.apply(x) --> Optional.of(x)
                         // --> opt
         System.out.println(
-                "By Right identity law, opt.flatMap(x->Optional.of(x)) " + opt.flatMap(g) + " is equal to opt " + opt);
+                "\nBy Right identity law, opt.flatMap(x->Optional.of(x)) " + opt.flatMap(g) + " is equal to opt "
+                        + opt);
 
         // Law 3: Associative law. monad.flatMap(f).flatMap(g) = monad.flatMap(x ->
         // f.apply(x).flatMap(g))
 
-        System.out.println("By Associative law, opt.flatMap(f).flatMap(g) is " + opt.flatMap(f).flatMap(g));
+        System.out.println("\nBy Associative law, opt.flatMap(f).flatMap(g) is " + opt.flatMap(f).flatMap(g));
         System.out.println(
-                "While opt.flatMap(f.apply(x).flatMap(g)) is equivalent: " + opt.flatMap(x -> f.apply(1).flatMap(g)));
+                "\nWhile opt.flatMap(f.apply(x).flatMap(g)) is equivalent: " + opt.flatMap(x -> f.apply(x).flatMap(g)));
 
     }
 }

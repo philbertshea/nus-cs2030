@@ -43,7 +43,7 @@ public class Lec3Slide16extra {
 
     // Static Binding: E.g. static method study. c is treated as a Person (binding at compile time)
     // Technically since the method is static, we do not need to referebce it to an instance of Person/Student. Just for illustration Purposes.
-    System.out.println("Static Binding: Person Student Person");
+    System.out.println("\nStatic Binding: Person Student Person");
     a.study();
     b.study();
     c.study();

@@ -17,9 +17,10 @@ public class Access1 {
         // private access modifier: accessible ONLY in SAME CLASS, SAME PACKAGE
         private boolean toBeScrapped;
 
-        // protected access modifier: accessible in SAME PACKAGE AND as subclass IN OTHER PACKAGES
+        // protected access modifier: accessible in SAME PACKAGE AND as subclass IN
+        // OTHER PACKAGES
         protected double COE;
-        
+
         public Vehicle(int year, double mileage, boolean toBeScrapped, double COE) {
             this.year = year;
             this.mileage = mileage;
@@ -37,21 +38,20 @@ public class Access1 {
 
     }
 
-
     // Case 2a: Subclass in SAME FILE. Default, Public, Protected OK. Private NO.
     public class MotorCycle extends Vehicle {
 
         public MotorCycle(int year, double mileage, boolean toBeScrapped, double COE) {
             super(year, mileage, toBeScrapped, COE);
         }
-        
+
         public void claimInsurance() {
             year = 2020;
             mileage = 1000;
             // toBeScrapped = false;
             COE = 1000;
         }
-        
+
     }
 
 }

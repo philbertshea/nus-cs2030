@@ -141,7 +141,7 @@ public class Geometry {
         private final Optional<Point> centre;
         private final double radius;
 
-        // RECALL: Private because
+        // RECALL: Private because we want to ensure users use getOptCircle which does a radius check.
         private OptCircle(Optional<Point> centre, double radius) {
             this.centre = centre;
             this.radius = radius;

@@ -25,9 +25,12 @@ public class Access3 {
 
     public static void main(String[] args) {
         Sedan car2 = new Sedan(2000, 100000000, true, 5000);
+        System.out.println("Case 4: Subclass from other package. Public, Protected OK. Default, Private NO.");
+        car2.printStats();
 
         // Case 5: Other class from other package. Public OK. Default, Private,
         // Protected NO.
+        System.out.println("\nCase 5: Other class from other package. Public OK. Default, Private, Protected NO.");
         // System.out.println("This is a Sedan produced in [Default]" + car2.year);
         System.out.println("Its mileage in km is [Public]" + car2.mileage);
         // System.out.println("It's relatively new so the recommendation to scrap it is

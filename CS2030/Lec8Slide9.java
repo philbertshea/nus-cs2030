@@ -46,7 +46,7 @@ public class Lec8Slide9 {
         System.out.println("For IntStream 1-10, sum is " + sumTwo + "(equivalent to " + sum + ") ,\n count is " + count
                 + " ,\n maximum is " + max);
 
-        // Intermediate operations are often used onto elements of a stream, before the
+        // Intermediate operations are often used on elements of a stream, before the
         // terminal operation is executed.
         // Mapping: a common intermediate operation
         int sumThree = IntStream.rangeClosed(1, 10).map(x -> x + 2).sum();
@@ -73,7 +73,7 @@ public class Lec8Slide9 {
         System.out.println("Map x-> x+2 as intermediate gives : " + sumThree
                 + "\n flatMap x-> IntStream.rangeClosed(1,x) as intermediate gives : " + sumFour);
 
-        // Intermediate Operations use lazy evaluation. Does not perform any operations
+        // Intermediate Operations use lazy evaluation. Do not perform any operations
         // on stream's elements until a terminal operation is called.
         // E.g. filter(x -> x%2 == 0) is an intermediate operation. This means the
         // filter is ONLY APPLIED when a TERMINAL OPERATION is called.
@@ -84,42 +84,48 @@ public class Lec8Slide9 {
         int otherSum = otherStream.map(x -> x + 1).sum(); // Eager
         System.out.println("\nSum of (2+1), (4+1), (6+1), (8+1), (10+1) = " + otherSum);
 
-        // Stateful and Stateless operations: 
-        // Stateless intermediate operations like filter and map : processing one element DOES NOT DEPEND ON OTHER ELEMENTS.
-        // Stateful intermediate operations like sorted, limit and distinct : DEPENDS ON OTHER ELEMENTS.
+        // Stateful and Stateless operations:
+        // Stateless intermediate operations like filter and map : processing one
+        // element DOES NOT DEPEND ON OTHER ELEMENTS.
+        // Stateful intermediate operations like sorted, limit and distinct : DEPENDS ON
+        // OTHER ELEMENTS.
 
         System.out.println("\nSort and print: ");
-        IntStream.of(7,9,5,8,3).sorted().forEach(System.out::println); 
-        // System.out::println is a method reference that replaces the lambda x -> System.out.println(x)
-        // Only use a method reference if the lambda ONLY CALLS ANOTHER METHOD. 
+        IntStream.of(7, 9, 5, 8, 3).sorted().forEach(System.out::println);
+        // System.out::println is a method reference that replaces the lambda x ->
+        // System.out.println(x)
+        // Only use a method reference if the lambda ONLY CALLS ANOTHER METHOD.
         // E.g. cannot replace if lambda is x -> System.out.println(x+1)
 
         System.out.println("\nPrint Distinct: ");
-        IntStream.of(0,0,1,1,1,0,1,0).distinct().forEach(System.out::println);
+        IntStream.of(0, 0, 1, 1, 1, 0, 1, 0).distinct().forEach(System.out::println);
 
-        // Method references: A lambda that simply calls another method can be replaced with a method reference.
-        // E.g. forEach(System.out::println). 3 types: 1. Reference to static method 2. Reference to instance method 3. Reference to constructor
-        
+        // Method references: A lambda that simply calls another method can be replaced
+        // with a method reference.
+        // E.g. forEach(System.out::println). 3 types: 1. Reference to static method 2.
+        // Reference to instance method 3. Reference to constructor
+
         System.out.println("\n forEach(lambda function) : ");
-        IntStream.of(1,2,3,4,5).forEach(x -> System.out.println(x));
+        IntStream.of(1, 2, 3, 4, 5).forEach(x -> System.out.println(x));
         System.out.println("\n forEach(method reference)");
-        IntStream.of(1,2,3,4,5).forEach(System.out::println);
+        IntStream.of(1, 2, 3, 4, 5).forEach(System.out::println);
 
         // Boolean Terminal Operations
         // noneMatch returns true if no element passes the predicate
         // allMatch returns true if all elements pass the predicate
 
         System.out.println("\n\nCheck: Is 17 prime? ");
-        // If NONE of the elements (2 to 16, inclusive) pass the predicate (17 % x == 0), this prints true.
-        System.out.println(IntStream.range(2,17).noneMatch(x -> 17 % x == 0));
+        // If NONE of the elements (2 to 16, inclusive) pass the predicate (17 % x ==
+        // 0), this prints true.
+        System.out.println(IntStream.range(2, 17).noneMatch(x -> 17 % x == 0));
 
         System.out.println("Is the list filled with numbers divisible by 3?");
         // If ALL of the elements pass the predicate, this prints true.
-        System.out.println(IntStream.range(3,15).allMatch(x -> x % 3 == 0));
+        System.out.println(IntStream.range(3, 15).allMatch(x -> x % 3 == 0));
 
         System.out.println("Is there any element in the list divisible by 10?");
         // If ANY of the elements pass the predicate, this prints true.
-        System.out.println(IntStream.rangeClosed(1,10).anyMatch(x -> x % 10 == 0));
+        System.out.println(IntStream.rangeClosed(1, 10).anyMatch(x -> x % 10 == 0));
 
     }
 }

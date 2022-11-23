@@ -17,8 +17,9 @@ interface Functor<T> {
 // Functors must obey two laws:
 // 1. If func is x -> x, then it should NOT CHANGE THE FUNCTOR
 // 2. If func is a composition goh, then the resulting functor should be the
-// SAME AS CALLING f with h and then g. (i.e. f(goh) = f(h) -> f(g))
-public class Lec8Slide7 {
+// SAME AS CALLING f with h and then g. (i.e. f(goh) = f(h) -> f(g))  
+
+public class Lec8Slide7 { // in this case, functor is list
     public static void main(String[] args) {
         IList<Integer> list = new IList<>(List.of(1, -2, 3));
         boolean checkOne = list.get().equals(list.map(x -> x).get());

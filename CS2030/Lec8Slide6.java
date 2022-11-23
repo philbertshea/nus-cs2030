@@ -19,7 +19,7 @@ class IList<T> {
 
     // A map function which, given a function, returns another IList   --> Functor(Slide7)
     <R> IList<R> map(Function<T,R> f) {
-        ArrayList<R> newList = new ArrayList<R>();
+        ArrayList<R> newList = new ArrayList<>();
         for (T item : list) {
             newList.add(f.apply(item));
         }

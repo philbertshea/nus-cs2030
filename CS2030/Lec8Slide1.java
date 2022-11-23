@@ -25,7 +25,7 @@ public class Lec8Slide1 {
 
         List<Integer> list = List.of(1, -2, 3);
         System.out.println("Sum of list with f applied: " + sumList(list, f)); // 2, -1, 4  --> 5
-        System.out.println("Sum of list with g applied: " + sumList(list, g)); // 10, 10, 40  --> 60
+        System.out.println("Sum of list with g applied: " + sumList(list, g)); // 10, 20, 30  --> 60
 
 
         // Composite functions like f on g?
