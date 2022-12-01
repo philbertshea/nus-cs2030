@@ -1,0 +1,23 @@
+We use the example of overriding methods. 
+
+If classes A and B have the same method f() defined, and class C inherits from them, 
+which of the two parent method will be invoked in new C().f()? 
+
+However for the case of two interfaces A and B, if they both specify f() to be 
+defined by a class C that implements them, then an overridden
+method in C would satisfy both contracts.
+
+In the case of interfaces with default methods, try compiling the program fragment
+below:
+
+interface A {
+default void f() { }
+}
+interface B {
+default void f() { }
+}
+class AB implements A, B { }
+
+Does it compile? What if only one of the interface’s f() has a default implementation?
+Does it compile now? And what is the compilation error? What if an overriding method
+f() is implemented in class AB?

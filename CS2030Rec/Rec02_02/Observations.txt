@@ -1,0 +1,13 @@
+My guess is that it cannot compile because class B does not have 
+an x variable declared like A.
+
+ERROR IN THINKING: When B extends A, it inherits the variable x as well, therefore
+there is no need to re-declare and define x.
+
+We observe that there are no problems with compilation as long as we return instances of a 
+type which matches that as declared, or is the subtype of that declared.
+
+E.G. public A method() {return new A} OK
+public A method() {return new B} OK since B is a subtype of A
+public B method() {return new B} OK
+public B method() {return new A} NOT OK.

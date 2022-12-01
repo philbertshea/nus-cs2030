@@ -1,0 +1,15 @@
+Give practical reasons as to why a Java class cannot inherit from multiple parent
+classes, but can implement multiple interfaces.
+
+My Ans: The key differences between a class and an interface are
+1) Methods in interfaces are only declared and do not contain concrete implementation. 
+Therefore, if a class implements multiple interfaces which contain a similar-named method of similar parameters and return value,
+there is no issue as it will only write one implementation for the repeating interface.
+
+However, if a class inherits multiple classes which contain a similar-named method but with different implementations
+The computer is unable to decide which implementation of the method to use upon a method call.
+
+
+2) A class has a constructor while an interface does not.
+When inheriting more than one class, the subclass cannot decide which constructor to inherit with super().
+However, since interfaces do not have constructors, this problem does not occur when implementing interfaces.

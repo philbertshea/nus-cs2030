@@ -1,0 +1,7 @@
+Only s.getArea() and p.print() are premissible. Suppose Shape s references
+an array of objects that implements the Shape interface, so each object is guaran-
+teed to implement the getArea method.
+Other than that, each object may or may not implement other interfaces (such as
+Printable), so s.print() may or may not be applicable.
+In addition, we say that for the above statement Shape s = c, variable s has a
+compile-time type of Shape but a runtime type of Circle.

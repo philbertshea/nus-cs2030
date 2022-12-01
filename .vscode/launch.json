@@ -1,7 +1,22 @@
 {
-    // Use IntelliSense to learn about possible attributes.
-    // Hover to view descriptions of existing attributes.
-    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
-    "version": "0.2.0",
-    "configurations": []
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Launch WrapperDelay",
+      "request": "launch",
+      "mainClass": "CS2030Rec.Rec03_02.WrapperDelay",
+      "projectName": "NUS Computing Code Files_9d4b56f"
+    },
+    {
+      "type": "java",
+      "name": "Launch PartC",
+      "request": "launch",
+      "mainClass": "CS2030Rec.Rec02_05.PartC",
+      "projectName": "NUS Computing Code Files_9d4b56f"
+    }
+  ]
 }

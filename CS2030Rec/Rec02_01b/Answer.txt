@@ -1,0 +1,1 @@
+No, you cannot inherit from multiple parent classes.

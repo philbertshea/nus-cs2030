@@ -1,0 +1,4 @@
+Yes, it is allowed. Interfaces can inherit from multiple parent interfaces. That
+said, do consider whether it violates the design principles of Interface Segregation
+(and also more generally Single Responsibility which is also applicable to concrete
+classes).
