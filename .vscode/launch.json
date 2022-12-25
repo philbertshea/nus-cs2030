@@ -6,6 +6,265 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch AddTwoNumbers",
+      "request": "launch",
+      "mainClass": "Leetcode.AddTwoNumbers",
+      "projectName": "NUS Computing Code Files_9d4b56f"
+    },
+    {
+      "type": "java",
+      "name": "Launch Palindrome",
+      "request": "launch",
+      "mainClass": "Leetcode.Palindrome",
+      "projectName": "NUS Computing Code Files_9d4b56f"
+    },
+    {
+      "type": "java",
+      "name": "Launch ValidParenthesis",
+      "request": "launch",
+      "mainClass": "Leetcode.ValidParenthesis",
+      "projectName": "NUS Computing Code Files_9d4b56f"
+    },
+    {
+      "type": "java",
+      "name": "Launch TwoSum",
+      "request": "launch",
+      "mainClass": "Leetcode.TwoSum",
+      "projectName": "NUS Computing Code Files_9d4b56f"
+    },
+    {
+      "type": "java",
+      "name": "Launch PossibleBipartition",
+      "request": "launch",
+      "mainClass": "Leetcode.PossibleBipartition",
+      "projectName": "NUS Computing Code Files_9d4b56f"
+    },
+    {
+      "type": "java",
+      "name": "Launch Test2",
+      "request": "launch",
+      "mainClass": "Leetcode.Test2",
+      "projectName": "NUS Computing Code Files_9d4b56f"
+    },
+    {
+      "type": "java",
+      "name": "Launch LongestSquareStreakInAnArray",
+      "request": "launch",
+      "mainClass": "Leetcode.LongestSquareStreakInAnArray",
+      "projectName": "NUS Computing Code Files_9d4b56f"
+    },
+    {
+      "type": "java",
+      "name": "Launch KeysAndRooms",
+      "request": "launch",
+      "mainClass": "Leetcode.KeysAndRooms",
+      "projectName": "NUS Computing Code Files_9d4b56f"
+    },
+    {
+      "type": "java",
+      "name": "Launch Test",
+      "request": "launch",
+      "mainClass": "CS2030Rec.Rec04_06.Test",
+      "projectName": "NUS Computing Code Files_9d4b56f"
+    },
+    {
+      "type": "java",
+      "name": "Launch PartH",
+      "request": "launch",
+      "mainClass": "CS2030Rec.Rec04_06.PartH",
+      "projectName": "NUS Computing Code Files_9d4b56f"
+    },
+    {
+      "type": "java",
+      "name": "Launch PartF",
+      "request": "launch",
+      "mainClass": "CS2030Rec.Rec04_06.PartF",
+      "projectName": "NUS Computing Code Files_9d4b56f"
+    },
+    {
+      "type": "java",
+      "name": "Launch PartE",
+      "request": "launch",
+      "mainClass": "CS2030Rec.Rec04_06.PartE",
+      "projectName": "NUS Computing Code Files_9d4b56f"
+    },
+    {
+      "type": "java",
+      "name": "Launch PartD",
+      "request": "launch",
+      "mainClass": "CS2030Rec.Rec04_06.PartD",
+      "projectName": "NUS Computing Code Files_9d4b56f"
+    },
+    {
+      "type": "java",
+      "name": "Launch PartB",
+      "request": "launch",
+      "mainClass": "CS2030Rec.Rec04_06.PartB",
+      "projectName": "NUS Computing Code Files_9d4b56f"
+    },
+    {
+      "type": "java",
+      "name": "Launch Application",
+      "request": "launch",
+      "mainClass": "CS2030Rec.Rec04_04.Question_QA_Answer.Application",
+      "projectName": "NUS Computing Code Files_9d4b56f"
+    },
+    {
+      "type": "java",
+      "name": "Launch Application",
+      "request": "launch",
+      "mainClass": "CS2030Rec.Rec04_04.Given_MCQTFQ.Application",
+      "projectName": "NUS Computing Code Files_9d4b56f"
+    },
+    {
+      "type": "java",
+      "name": "Launch QAApplication",
+      "request": "launch",
+      "mainClass": "CS2030Rec.Rec04_04.QAApplication",
+      "projectName": "NUS Computing Code Files_9d4b56f"
+    },
+    {
+      "type": "java",
+      "name": "Launch Application",
+      "request": "launch",
+      "mainClass": "CS2030Rec.Rec04_04.Application",
+      "projectName": "NUS Computing Code Files_9d4b56f"
+    },
+    {
+      "type": "java",
+      "name": "Launch QnA",
+      "request": "launch",
+      "mainClass": "CS2030Rec.Rec04_04.QnA",
+      "projectName": "NUS Computing Code Files_9d4b56f"
+    },
+    {
+      "type": "java",
+      "name": "Launch TryCatchFinally",
+      "request": "launch",
+      "mainClass": "CS2030Rec.Rec04_03.ExceptionsInDetail.TryCatchFinally",
+      "projectName": "NUS Computing Code Files_9d4b56f"
+    },
+    {
+      "type": "java",
+      "name": "Launch Hi",
+      "request": "launch",
+      "mainClass": "CS2030.Hi",
+      "projectName": "NUS Computing Code Files_9d4b56f"
+    },
+    {
+      "type": "java",
+      "name": "Launch TryCatch5",
+      "request": "launch",
+      "mainClass": "CS2030Rec.Rec04_03.ExceptionsInDetail.TryCatch5",
+      "projectName": "NUS Computing Code Files_9d4b56f"
+    },
+    {
+      "type": "java",
+      "name": "Launch TryCatch4",
+      "request": "launch",
+      "mainClass": "CS2030Rec.Rec04_03.ExceptionsInDetail.TryCatch4",
+      "projectName": "NUS Computing Code Files_9d4b56f"
+    },
+    {
+      "type": "java",
+      "name": "Launch TryCatch2",
+      "request": "launch",
+      "mainClass": "CS2030Rec.Rec04_03.ExceptionsInDetail.TryCatch2",
+      "projectName": "NUS Computing Code Files_9d4b56f"
+    },
+    {
+      "type": "java",
+      "name": "Launch UncheckedExceptions",
+      "request": "launch",
+      "mainClass": "CS2030Rec.Rec04_03.ExceptionsInDetail.UncheckedExceptions",
+      "projectName": "NUS Computing Code Files_9d4b56f"
+    },
+    {
+      "type": "java",
+      "name": "Launch PartC",
+      "request": "launch",
+      "mainClass": "CS2030Rec.Rec04_02.PartC",
+      "projectName": "NUS Computing Code Files_9d4b56f"
+    },
+    {
+      "type": "java",
+      "name": "Launch PartB",
+      "request": "launch",
+      "mainClass": "CS2030Rec.Rec04_01.PartB",
+      "projectName": "NUS Computing Code Files_9d4b56f"
+    },
+    {
+      "type": "java",
+      "name": "Launch PartA",
+      "request": "launch",
+      "mainClass": "CS2030Rec.Rec04_01.PartA",
+      "projectName": "NUS Computing Code Files_9d4b56f"
+    },
+    {
+      "type": "java",
+      "name": "Launch PartE",
+      "request": "launch",
+      "mainClass": "CS2030Rec.Rec03_06.PartE",
+      "projectName": "NUS Computing Code Files_9d4b56f"
+    },
+    {
+      "type": "java",
+      "name": "Launch PartD",
+      "request": "launch",
+      "mainClass": "CS2030Rec.Rec03_06.PartD",
+      "projectName": "NUS Computing Code Files_9d4b56f"
+    },
+    {
+      "type": "java",
+      "name": "Launch PartB",
+      "request": "launch",
+      "mainClass": "CS2030Rec.Rec03_06.PartB",
+      "projectName": "NUS Computing Code Files_9d4b56f"
+    },
+    {
+      "type": "java",
+      "name": "Launch PartA",
+      "request": "launch",
+      "mainClass": "CS2030Rec.Rec03_06.PartA",
+      "projectName": "NUS Computing Code Files_9d4b56f"
+    },
+    {
+      "type": "java",
+      "name": "Launch Ans2",
+      "request": "launch",
+      "mainClass": "CS2030Rec.Rec03_05.NewParameters.Ans2",
+      "projectName": "NUS Computing Code Files_9d4b56f"
+    },
+    {
+      "type": "java",
+      "name": "Launch Ans1",
+      "request": "launch",
+      "mainClass": "CS2030Rec.Rec03_05.NewParameters.Ans1",
+      "projectName": "NUS Computing Code Files_9d4b56f"
+    },
+    {
+      "type": "java",
+      "name": "Launch Lec5Slide17",
+      "request": "launch",
+      "mainClass": "CS2030.Lec5Slide17",
+      "projectName": "NUS Computing Code Files_9d4b56f"
+    },
+    {
+      "type": "java",
+      "name": "Launch PartC",
+      "request": "launch",
+      "mainClass": "CS2030Rec.Rec03_04.PartC",
+      "projectName": "NUS Computing Code Files_9d4b56f"
+    },
+    {
+      "type": "java",
+      "name": "Launch Equals",
+      "request": "launch",
+      "mainClass": "CS2030Rec.Rec03_03.Equals",
+      "projectName": "NUS Computing Code Files_9d4b56f"
+    },
+    {
+      "type": "java",
       "name": "Launch WrapperDelay",
       "request": "launch",
       "mainClass": "CS2030Rec.Rec03_02.WrapperDelay",

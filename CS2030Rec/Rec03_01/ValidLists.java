@@ -33,7 +33,7 @@ public class ValidLists {
         // List<Object> list1b = new ArrayList<String>(); // Returns an error
 
         // Part B
-        // List<? super Integer> list2 = new List<Object>();
+        List<? super Integer> list2 = new List<Object>();
         // My guess: COMPILES because Object is a supertype of Integer
         // Answer: CANNOT COMPILE because *** List is an Interface --> Interfaces have NO CONSTRUCTOR i.e. cannot create an instance of an interface ***
 
@@ -47,7 +47,7 @@ public class ValidLists {
         // Answer: COMPILES
 
         // Part D
-        // List<? super Integer> list4 = new LinkedList<int>();
+        List<? super Integer> list4 = new LinkedList<int>();
         // My guess: CANNOT COMPILE because int is a primitive type. ONLY REFERENCE TYPES like Integer are accepted.
         // Answer: CANNOT COMPILE
 

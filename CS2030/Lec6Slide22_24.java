@@ -1,7 +1,7 @@
 package CS2030;
 
 public class Lec6Slide22_24 {
-
+    Map<String, String>
     // Besides defining constants, enums can also store variables, methods and have
     // constructors, just like any other class.
     enum Color {
